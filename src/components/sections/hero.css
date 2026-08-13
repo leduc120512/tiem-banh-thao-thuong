@@ -1,0 +1,327 @@
+.hero {
+  position: relative;
+  padding-top: calc(var(--nav-h) + clamp(1.2rem, 5vw, 3rem));
+  padding-bottom: clamp(3rem, 8vw, 6rem);
+  overflow: clip;
+}
+
+/* mảng xanh rất nhạt vòng qua góc trên bên phải — một đường cong, không phải nửa trang */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -18%;
+  right: -22%;
+  width: 92%;
+  height: 82%;
+  background: var(--blue-1);
+  border-radius: 0 0 0 100% / 0 0 0 100%;
+  z-index: -1;
+}
+
+.hero__grid {
+  position: relative;
+  display: grid;
+  gap: clamp(1.6rem, 5vw, 2.4rem);
+}
+
+/* ---------- tiêu đề ---------- */
+
+.hero__tag {
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  transform: rotate(-1.6deg);
+  background: var(--paper-2);
+}
+
+.hero__tag b {
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+
+.hero__h1 {
+  font-size: clamp(2.35rem, 10.4vw, 5.2rem);
+  font-weight: 500;
+  line-height: 0.99;
+  letter-spacing: -0.035em;
+  font-variation-settings: 'SOFT' 45, 'WONK' 1, 'opsz' 110;
+}
+
+.hero__em {
+  position: relative;
+  display: inline-block;
+  font-style: italic;
+  font-weight: 700;
+  font-variation-settings: 'SOFT' 90, 'WONK' 1, 'opsz' 120;
+  padding-right: 0.06em;
+}
+
+.hero__ul {
+  position: absolute;
+  left: -2%;
+  bottom: -0.16em;
+  width: 104%;
+  z-index: -1;
+}
+
+/* dòng do SplitText tạo — cần khung cắt để chữ trượt lên */
+.hero__h1 .ln {
+  padding-bottom: 0.06em;
+}
+
+/* ---------- ảnh ---------- */
+
+/* chừa chỗ cho tấm bánh nhỏ thò ra phía dưới, khỏi đè lên chữ */
+.hero__art {
+  position: relative;
+  padding-bottom: 12%;
+}
+
+.hero__mainWrap {
+  position: relative;
+  width: 86%;
+  margin-left: auto;
+}
+
+.hero__main {
+  --chamf: 20px;
+  display: block;
+  width: 100%;
+  padding-bottom: clamp(2rem, 6vw, 2.6rem);
+  text-align: left;
+  transform: rotate(-1.5deg);
+  transition: transform 0.6s var(--e-out);
+}
+
+.hero__main .board__frame {
+  background: var(--blue-2);
+}
+
+.hero__main:hover {
+  transform: rotate(-0.4deg) scale(1.012);
+}
+
+.hero__main img {
+  transition: transform 0.9s var(--e-out);
+}
+
+.hero__main:hover img {
+  transform: scale(1.045);
+}
+
+/* dòng chữ nằm dưới đế bánh — đúng chỗ tiệm hay viết.
+   Nằm lệch phải để không bị tấm bánh nhỏ che mất. */
+.hero__cap {
+  position: absolute;
+  right: clamp(0.9rem, 3vw, 1.4rem);
+  bottom: clamp(0.35rem, 1.6vw, 0.6rem);
+  font-size: clamp(1.05rem, 4vw, 1.45rem);
+  color: var(--ink);
+}
+
+.hero__cap::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 0.5em;
+  border-radius: 50%;
+  background: var(--orange);
+  vertical-align: 0.35em;
+}
+
+.hero__candle {
+  position: absolute;
+  top: clamp(-46px, -9vw, -30px);
+  left: 22%;
+  z-index: 4;
+}
+
+.hero__side {
+  --chamf: 12px;
+  position: absolute;
+  left: 0;
+  bottom: 9%;
+  width: 38%;
+  max-width: 190px;
+  transform: rotate(5deg);
+  transition: transform 0.55s var(--e-out);
+  z-index: 4;
+}
+
+.hero__side:hover {
+  transform: rotate(1.5deg) scale(1.04);
+}
+
+/* ---------- phần dưới ---------- */
+
+.hero__lede {
+  max-width: 34ch;
+  color: var(--ink-2);
+  font-size: clamp(0.95rem, 3.6vw, 1.075rem);
+  text-wrap: pretty;
+}
+
+.hero__acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+
+.hero__facts {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: clamp(2rem, 6vw, 2.75rem);
+  padding-top: 1.35rem;
+  border-top: 1px solid rgba(20, 48, 58, 0.16);
+}
+
+.hero__facts li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.hero__facts li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue-3);
+}
+
+.hero__facts li:nth-child(2)::before {
+  background: var(--orange);
+}
+
+.hero__facts li:nth-child(3)::before {
+  background: var(--pink);
+}
+
+.hero__facts b {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.hero__facts span {
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+}
+
+/* ---------- dải chữ dọc ---------- */
+
+.hero__rail {
+  display: none;
+}
+
+/* ---------- tablet ---------- */
+
+@media (min-width: 700px) {
+  .hero__art {
+    padding-bottom: 8%;
+  }
+  .hero__mainWrap {
+    width: 74%;
+  }
+  .hero__side {
+    left: 2%;
+    width: 30%;
+  }
+  .hero__facts {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+}
+
+/* ---------- desktop: bố cục lệch ---------- */
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__grid {
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: clamp(1rem, 2vw, 2rem);
+    row-gap: clamp(1.5rem, 3vw, 2.5rem);
+    align-items: start;
+  }
+
+  .hero__copy {
+    grid-column: 1 / 9;
+    grid-row: 1;
+    padding-top: 2.5vh;
+  }
+
+  .hero__h1 {
+    font-size: clamp(3.4rem, 5.9vw, 5.1rem);
+  }
+
+  /* ảnh trồi lên cao hơn khối chữ và lấn sang trái một chút */
+  .hero__art {
+    grid-column: 8 / 13;
+    grid-row: 1 / 3;
+    margin-left: -7%;
+    margin-top: -3.5vh;
+    padding-bottom: 0;
+    z-index: 2;
+  }
+
+  .hero__mainWrap {
+    width: 100%;
+  }
+
+  .hero__side {
+    left: -22%;
+    bottom: 8%;
+    width: 46%;
+    max-width: none;
+  }
+
+  .hero__bottom {
+    grid-column: 1 / 7;
+    grid-row: 2;
+  }
+
+  .hero__lede {
+    max-width: 38ch;
+  }
+
+  .hero__facts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero__rail {
+    display: block;
+    position: absolute;
+    left: calc(var(--gut) * -0.15);
+    bottom: 14%;
+    transform-origin: left bottom;
+    transform: rotate(-90deg) translateX(0);
+    white-space: nowrap;
+    z-index: 3;
+  }
+
+  .hero__rail span {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__side {
+    left: -28%;
+    width: 50%;
+  }
+}

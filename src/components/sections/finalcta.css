@@ -1,0 +1,80 @@
+.fc {
+  position: relative;
+  background: var(--blue-deep);
+  color: var(--paper-2);
+  padding-block: clamp(3.75rem, 9vw, 7rem) clamp(3.5rem, 8vw, 6rem);
+  overflow: clip;
+}
+
+.fc__drip {
+  top: -1px;
+}
+
+.fc__grid {
+  position: relative;
+  display: grid;
+  gap: clamp(2.4rem, 6vw, 3rem);
+  align-items: center;
+}
+
+.fc__h2 {
+  font-size: clamp(2.1rem, 9vw, 4.4rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-variation-settings: 'SOFT' 45, 'WONK' 1, 'opsz' 130;
+  max-width: 15ch;
+}
+
+.fc__h2 em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--amber);
+  font-variation-settings: 'SOFT' 95, 'WONK' 1, 'opsz' 140;
+}
+
+.fc__h2 .ln {
+  padding-bottom: 0.05em;
+}
+
+.fc__sub {
+  margin-top: 1.2rem;
+  max-width: 40ch;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.9375rem;
+}
+
+.fc__acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.8rem;
+}
+
+.fc__art {
+  --chamf: 16px;
+  width: min(70%, 300px);
+  justify-self: end;
+  padding-bottom: 2rem;
+  transform: rotate(3deg);
+}
+
+.fc__cap {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.42rem;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+@media (min-width: 1024px) {
+  .fc__grid {
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+  }
+
+  .fc__art {
+    width: clamp(260px, 26vw, 360px);
+    margin-right: -4%;
+  }
+}

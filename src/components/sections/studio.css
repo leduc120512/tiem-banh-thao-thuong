@@ -1,0 +1,367 @@
+.st {
+  position: relative;
+  background: var(--blue-1);
+}
+
+.st__head {
+  max-width: 46ch;
+  margin-bottom: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.st__h2 {
+  font-size: clamp(2rem, 8.4vw, 3.9rem);
+  margin-top: 0.5rem;
+  letter-spacing: -0.032em;
+}
+
+.st__h2 em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--orange);
+  font-variation-settings: 'SOFT' 90, 'WONK' 1, 'opsz' 110;
+}
+
+.st__sub {
+  margin-top: 0.9rem;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+
+/* ---------- khung ---------- */
+
+.st__panel {
+  background: var(--paper-2);
+  padding: clamp(1.1rem, 3.5vw, 2rem);
+  clip-path: polygon(22px 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%, 0 22px);
+  box-shadow: 0 24px 60px -46px rgba(20, 48, 58, 0.7);
+  display: grid;
+  gap: clamp(1.4rem, 4vw, 2rem);
+}
+
+/* ---------- xem trước ---------- */
+
+.cp__board {
+  --chamf: 16px;
+  padding: clamp(0.7rem, 2.4vw, 1rem);
+  background: var(--board);
+}
+
+.cp__stage {
+  position: relative;
+  background: var(--board);
+  padding-bottom: 3.2rem;
+}
+
+.cp__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cp__msg {
+  position: absolute;
+  left: 0.3rem;
+  right: 0.3rem;
+  bottom: 0.55rem;
+  text-align: center;
+  font-size: clamp(1.15rem, 4.6vw, 1.5rem);
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+.cp__msg.is-empty {
+  color: var(--ink-3);
+  opacity: 0.55;
+  text-shadow: none;
+  font-weight: 500;
+}
+
+.cp__badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+  border: 1px solid rgba(20, 48, 58, 0.16);
+  padding: 0.25rem 0.5rem;
+}
+
+.st__preview {
+  position: relative;
+}
+
+.st__serve {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+  padding-left: 0.2rem;
+}
+
+.st__serve b {
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.st__serve span {
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+
+/* ---------- điều khiển ---------- */
+
+.st__controls {
+  display: grid;
+  gap: clamp(1rem, 3vw, 1.4rem);
+}
+
+.st__group {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.st__group legend {
+  padding: 0;
+  margin-bottom: 0.55rem;
+}
+
+.st__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.5em 0.85em;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border: 1px solid rgba(20, 48, 58, 0.2);
+  background: transparent;
+  border-radius: 999px;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s var(--e-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.chip i {
+  font-style: normal;
+  font-size: 0.6875rem;
+  color: var(--ink-3);
+}
+
+.chip:hover {
+  border-color: var(--ink-2);
+}
+
+.chip:active {
+  transform: scale(0.95);
+}
+
+.chip.is-on {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper-2);
+}
+
+.chip.is-on i {
+  color: var(--blue-2);
+}
+
+/* màu kem */
+
+.st__swatches {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sw {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  border: 1px solid rgba(20, 48, 58, 0.18);
+  background: var(--c);
+  transition: transform 0.3s var(--e-out), box-shadow 0.3s;
+}
+
+.sw span {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--r);
+  opacity: 0;
+  transform: scale(0.4);
+  transition: opacity 0.25s, transform 0.35s var(--e-out);
+}
+
+.sw:hover {
+  transform: translateY(-3px);
+}
+
+.sw.is-on {
+  box-shadow: 0 0 0 2px var(--paper-2), 0 0 0 3.5px var(--ink);
+}
+
+.sw.is-on span {
+  opacity: 1;
+  transform: none;
+}
+
+.st__swName {
+  font-size: 1.25rem;
+  color: var(--ink-2);
+  margin-left: 0.15rem;
+}
+
+/* chữ trên bánh */
+
+.st__group:has(.st__input) {
+  position: relative;
+}
+
+.st__input {
+  width: 100%;
+  padding: 0.75rem 3.6rem 0.75rem 0.9rem;
+  background: var(--paper);
+  border: 1px solid rgba(20, 48, 58, 0.2);
+  border-radius: 2px;
+  font-family: var(--f-hand);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.st__input::placeholder {
+  color: var(--ink-3);
+  opacity: 0.7;
+}
+
+.st__input:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(20, 48, 58, 0.08);
+}
+
+.st__count {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.85rem;
+  font-size: 0.6875rem;
+  color: var(--ink-3);
+}
+
+/* ---------- hoá đơn ---------- */
+
+.st__bill {
+  display: grid;
+  gap: 1.1rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed rgba(20, 48, 58, 0.3);
+}
+
+.st__price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.st__price strong {
+  font-family: var(--f-display);
+  font-size: clamp(1.75rem, 7vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.st__price em {
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  margin-top: 0.35rem;
+}
+
+.st__acts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.st__call {
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.st__call:hover {
+  color: var(--orange);
+}
+
+/* ---------- rộng hơn ---------- */
+
+@media (min-width: 860px) {
+  .st__panel {
+    grid-template-columns: minmax(300px, 40%) 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+    column-gap: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  /* Bánh nằm yên một chỗ trong lúc cuộn qua đống lựa chọn bên phải. */
+  .st__preview {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    position: sticky;
+    top: calc(var(--nav-h) + 1.5rem);
+    align-self: start;
+  }
+
+  .st__controls {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .st__bill {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .st__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
+    align-items: end;
+    gap: 2rem;
+  }
+
+  .st__head .u-eyebrow,
+  .st__h2 {
+    grid-column: 1;
+  }
+
+  .st__sub {
+    grid-column: 2;
+    max-width: 40ch;
+    margin-bottom: 0.6rem;
+  }
+
+  .st__controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .st__group:has(.st__input),
+  .st__group:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+}

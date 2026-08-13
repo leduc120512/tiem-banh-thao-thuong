@@ -1,0 +1,58 @@
+.pl {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--blue-deep);
+  color: var(--paper-2);
+  display: grid;
+  place-content: center;
+  gap: 1.4rem;
+  justify-items: center;
+}
+
+.pl__row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  overflow: hidden;
+  padding-bottom: 0.15em;
+}
+
+.pl__mark {
+  width: 34px;
+  height: 34px;
+  color: var(--blue-2);
+}
+
+.pl__line {
+  display: flex;
+  gap: 0.32em;
+  overflow: hidden;
+  font-family: var(--f-display);
+  font-size: clamp(1.4rem, 6vw, 2.1rem);
+  font-weight: 500;
+  font-variation-settings: 'SOFT' 60, 'WONK' 1, 'opsz' 60;
+  letter-spacing: -0.02em;
+}
+
+.pl__word {
+  display: inline-block;
+}
+
+/* nét kem phết ngang */
+.pl__spread {
+  width: min(58vw, 300px);
+  height: 5px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pl__spread i {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--amber), var(--pink));
+  transform: scaleX(0);
+  transform-origin: left;
+}

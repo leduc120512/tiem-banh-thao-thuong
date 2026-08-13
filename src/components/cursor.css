@@ -1,0 +1,49 @@
+.cur {
+  display: none;
+}
+
+html.cursor-on .cur {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: none;
+}
+
+.cur__dot,
+.cur__ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform;
+}
+
+.cur__dot {
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  background: var(--orange);
+}
+
+.cur__ring {
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border: 1px solid rgba(20, 48, 58, 0.45);
+  display: grid;
+  place-content: center;
+}
+
+.cur__label {
+  font-size: 4.6px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: var(--ink);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+}

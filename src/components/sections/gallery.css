@@ -1,0 +1,157 @@
+.gl {
+  background: var(--paper);
+}
+
+.gl__head {
+  margin-bottom: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+.gl__h2 {
+  font-size: clamp(1.8rem, 7vw, 3.1rem);
+  margin-top: 0.5rem;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+
+.gl__note {
+  margin-top: 0.85rem;
+  max-width: 44ch;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+
+.gl__filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+  margin-top: 1.4rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 0.35rem;
+  margin-inline: calc(var(--gut) * -1);
+  padding-inline: var(--gut);
+}
+
+.gl__filters::-webkit-scrollbar {
+  display: none;
+}
+
+.gl__filters .chip {
+  flex: none;
+}
+
+/* ---------- lưới so le ---------- */
+
+.gl__grid {
+  columns: 2;
+  column-gap: clamp(0.5rem, 2vw, 1.1rem);
+}
+
+.gl__item {
+  break-inside: avoid;
+  margin-bottom: clamp(0.5rem, 2vw, 1.1rem);
+}
+
+.gl__item--tilt .gl__btn {
+  transform: rotate(-1.8deg);
+}
+
+.gl__btn {
+  --chamf: 10px;
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 5px 5px 1.55rem;
+  transition: transform 0.5s var(--e-out), box-shadow 0.5s var(--e-out);
+}
+
+/* đế bánh chưa viết gì thì không cần chừa chỗ cho chữ */
+.gl__btn--bare {
+  padding-bottom: 5px;
+}
+
+.gl__btn:hover,
+.gl__btn:focus-visible {
+  transform: rotate(0deg) translateY(-5px) scale(1.015);
+  box-shadow: 0 22px 40px -28px rgba(20, 48, 58, 0.6);
+  z-index: 2;
+}
+
+.gl__btn img {
+  transition: transform 0.85s var(--e-out);
+}
+
+.gl__btn:hover img {
+  transform: scale(1.07);
+}
+
+.gl__msg {
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.28rem;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.gl__more {
+  margin-top: clamp(1.6rem, 4vw, 2.4rem);
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  max-width: 46ch;
+}
+
+.gl__more a {
+  color: var(--orange);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+@media (min-width: 700px) {
+  .gl__grid {
+    columns: 3;
+  }
+
+  .gl__msg {
+    font-size: 1rem;
+  }
+
+  .gl__btn {
+    padding-bottom: 1.85rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gl__grid {
+    columns: 4;
+  }
+
+  .gl__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 1.4rem 2rem;
+  }
+
+  .gl__head .u-eyebrow,
+  .gl__h2 {
+    grid-column: 1;
+  }
+
+  .gl__note {
+    grid-column: 2;
+    grid-row: 2;
+    margin-bottom: 0.4rem;
+  }
+
+  .gl__filters {
+    grid-column: 1 / -1;
+    margin-inline: 0;
+    padding-inline: 0;
+    flex-wrap: wrap;
+  }
+}

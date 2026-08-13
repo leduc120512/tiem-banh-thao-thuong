@@ -1,0 +1,300 @@
+.sig {
+  overflow: clip;
+  padding-bottom: clamp(3.5rem, 8vw, 6rem);
+}
+
+.sig__head {
+  position: relative;
+  max-width: 62ch;
+  margin-bottom: clamp(1.8rem, 5vw, 3rem);
+}
+
+.sig__h2 {
+  font-size: clamp(2rem, 8.4vw, 3.9rem);
+  margin-top: 0.5rem;
+  letter-spacing: -0.032em;
+}
+
+.sig__h2 em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--orange);
+  font-variation-settings: 'SOFT' 90, 'WONK' 1, 'opsz' 110;
+}
+
+.sig__note {
+  margin-top: 0.9rem;
+  max-width: 44ch;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+
+.sig__hint {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.35rem;
+  color: var(--blue-3);
+  transform: rotate(-3deg);
+}
+
+/* ---------- kệ ---------- */
+
+.sig__viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-inline: var(--gut);
+  padding-block: 0.75rem 1.5rem;
+}
+
+.sig__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.sig__track {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+  width: max-content;
+  align-items: flex-start;
+}
+
+.sig__card {
+  flex: none;
+  width: min(74vw, 320px);
+  scroll-snap-align: center;
+}
+
+/* lệch nhịp: tấm chẵn tụt xuống, tấm lẻ nghiêng nhẹ */
+.sig__card:nth-child(even) {
+  margin-top: clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.sig__card:nth-child(3n) .sig__board {
+  transform: rotate(1.4deg);
+}
+
+.sig__card:nth-child(3n + 1) .sig__board {
+  transform: rotate(-1.2deg);
+}
+
+.sig__btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.sig__idx {
+  display: block;
+  font-family: var(--f-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+  margin-bottom: 0.55rem;
+}
+
+.sig__board {
+  --chamf: 14px;
+  display: block;
+  padding-bottom: 2.1rem;
+  position: relative;
+  transition: transform 0.55s var(--e-out), box-shadow 0.55s var(--e-out);
+}
+
+.sig__btn:hover .sig__board,
+.sig__btn:focus-visible .sig__board {
+  transform: rotate(0deg) translateY(-6px) !important;
+  box-shadow: 0 22px 40px -26px rgba(20, 48, 58, 0.62);
+}
+
+.sig__board img {
+  transition: transform 0.8s var(--e-out);
+}
+
+.sig__btn:hover .sig__board img {
+  transform: scale(1.06);
+}
+
+.sig__msg {
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sig__meta {
+  display: block;
+  margin-top: 0.85rem;
+}
+
+.sig__meta b {
+  display: block;
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.sig__meta > span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+.sig__meta em {
+  display: inline-block;
+  margin-top: 0.55rem;
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+/* tấm cuối: lối rẽ sang phần tự thiết kế */
+.sig__card--end {
+  width: min(62vw, 260px);
+  align-self: center;
+}
+
+.sig__end {
+  background: var(--blue-deep);
+  color: var(--paper-2);
+  padding: clamp(1.5rem, 4vw, 2rem);
+  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+  transform: rotate(-1.5deg);
+}
+
+.sig__end p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--blue-2);
+}
+
+@media (min-width: 700px) {
+  .sig__card {
+    width: min(46vw, 340px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sig {
+    padding-bottom: clamp(4rem, 7vw, 7rem);
+  }
+
+  .sig__head {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    column-gap: 2rem;
+  }
+
+  .sig__h2 {
+    grid-column: 1;
+    max-width: 14ch;
+  }
+
+  .sig__head .u-eyebrow {
+    grid-column: 1;
+  }
+
+  .sig__note {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    max-width: 34ch;
+    margin-bottom: 0.5rem;
+  }
+
+  .sig__hint {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    margin: 0;
+  }
+
+  .sig__viewport {
+    padding-block: 1.5rem 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(20, 48, 58, 0.28) transparent;
+  }
+
+  .sig__viewport::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+
+  .sig__viewport::-webkit-scrollbar-thumb {
+    background: rgba(20, 48, 58, 0.28);
+    border-radius: 6px;
+  }
+
+  /* khi GSAP ghim mảng lại thì mới bỏ cuộn của trình duyệt đi */
+  .sig.is-pinned .sig__viewport {
+    overflow: visible;
+    scroll-snap-type: none;
+    scrollbar-width: none;
+  }
+
+  .sig.is-pinned .sig__viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sig__card {
+    width: clamp(260px, 22vw, 330px);
+  }
+
+  .sig__card:nth-child(even) {
+    margin-top: 3.5rem;
+  }
+
+  .sig__card:nth-child(4n) {
+    margin-top: 1.5rem;
+  }
+
+  /* Khi cả mảng bị ghim thì phải gói gọn trong một màn hình,
+     nên ảnh cao quá bị cắt bớt chiều đứng thay vì đẩy chữ ra ngoài. */
+  .sig.is-pinned {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: calc(var(--nav-h) + clamp(0.75rem, 2.5vh, 2rem));
+    padding-bottom: clamp(1rem, 3vh, 2.5rem);
+  }
+
+  .sig.is-pinned .sig__head {
+    margin-bottom: clamp(0.9rem, 2.2vh, 1.8rem);
+  }
+
+  .sig.is-pinned .sig__board .board__frame {
+    max-height: clamp(190px, 29vh, 360px);
+  }
+
+  /* màn thấp thì cắt bớt dòng mô tả cho vừa một khung hình */
+  .sig.is-pinned .sig__meta > span {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .sig.is-pinned .sig__card:nth-child(even) {
+    margin-top: clamp(1rem, 3vh, 3rem);
+  }
+
+  .sig.is-pinned .sig__card:nth-child(4n) {
+    margin-top: clamp(0.5rem, 1.5vh, 1.5rem);
+  }
+}

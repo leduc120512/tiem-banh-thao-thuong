@@ -1,0 +1,180 @@
+.cs {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cs__scrim {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: rgba(15, 44, 54, 0.58);
+}
+
+.cs__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cs__panel {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+  max-height: 92svh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--paper);
+  padding: 1.4rem var(--gut) calc(1.6rem + env(safe-area-inset-bottom));
+  clip-path: polygon(24px 0, 100% 0, 100% 100%, 0 100%, 0 24px);
+}
+
+.cs__close {
+  position: sticky;
+  top: 0;
+  float: right;
+  display: grid;
+  place-content: center;
+  width: 40px;
+  height: 40px;
+  margin: -0.4rem -0.4rem 0 0;
+  border-radius: 50%;
+  background: var(--paper-2);
+  border: 1px solid rgba(20, 48, 58, 0.18);
+  z-index: 3;
+  transition: transform 0.35s var(--e-out), background 0.3s;
+}
+
+.cs__close:hover {
+  transform: rotate(90deg);
+  background: var(--ink);
+  color: var(--paper-2);
+}
+
+.cs__body {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.cs__board {
+  --chamf: 14px;
+  padding-bottom: 2.1rem;
+  transform: rotate(-1.2deg);
+}
+
+.cs__msg {
+  position: absolute;
+  left: 0.9rem;
+  right: 0.9rem;
+  bottom: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.12;
+}
+
+.cs__name {
+  font-size: clamp(1.7rem, 7vw, 2.4rem);
+  margin-top: 0.35rem;
+  letter-spacing: -0.03em;
+}
+
+.cs__note {
+  margin-top: 0.7rem;
+  max-width: 46ch;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+.cs__sizes {
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(20, 48, 58, 0.24);
+}
+
+.cs__sizes ul {
+  margin-top: 0.7rem;
+}
+
+.cs__sizes li {
+  display: grid;
+  grid-template-columns: 3.6rem 1fr auto;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding-block: 0.42rem;
+  border-bottom: 1px dotted rgba(20, 48, 58, 0.2);
+  font-size: 0.875rem;
+}
+
+.cs__sizes b {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.cs__sizes span {
+  color: var(--ink-3);
+  font-size: 0.8125rem;
+}
+
+.cs__sizes em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.cs__disclaimer {
+  margin-top: 0.65rem;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+
+.cs__acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.4rem;
+}
+
+.cs__alt {
+  width: 100%;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+  margin-top: 0.2rem;
+}
+
+.cs__alt:hover {
+  color: var(--orange);
+}
+
+@media (min-width: 900px) {
+  .cs__center {
+    align-items: center;
+  }
+
+  .cs__panel {
+    width: min(980px, 92vw);
+    max-height: 88svh;
+    padding: 2rem;
+    clip-path: polygon(28px 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%, 0 28px);
+  }
+
+  .cs__body {
+    grid-template-columns: 42% 1fr;
+    gap: 2.4rem;
+    align-items: start;
+  }
+
+  .cs__close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    float: none;
+    margin: 0;
+  }
+}

@@ -1,0 +1,191 @@
+.pr {
+  background: var(--paper);
+}
+
+.pr__head {
+  max-width: 52ch;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.pr__h2 {
+  font-size: clamp(1.8rem, 7vw, 3.1rem);
+  margin-top: 0.5rem;
+  letter-spacing: -0.03em;
+  max-width: 16ch;
+}
+
+.pr__sub {
+  margin-top: 0.85rem;
+  max-width: 42ch;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+
+/* ---------- tờ phiếu ---------- */
+
+.pr__list {
+  position: relative;
+  background: var(--paper-2);
+  padding: clamp(1.4rem, 4vw, 2.4rem) clamp(1.1rem, 4vw, 2.4rem);
+  /* mép trên và dưới răng cưa như phiếu xé */
+  --tooth: 12px;
+  -webkit-mask:
+    radial-gradient(var(--tooth) at var(--tooth) 0, #0000 99%, #000 101%) 0 0 / calc(var(--tooth) * 2) 100% repeat-x,
+    radial-gradient(var(--tooth) at var(--tooth) 100%, #0000 99%, #000 101%) 0 100% / calc(var(--tooth) * 2) 100% repeat-x,
+    linear-gradient(#000 0 0) 0 var(--tooth) / 100% calc(100% - var(--tooth) * 2) no-repeat;
+  mask:
+    radial-gradient(var(--tooth) at var(--tooth) 0, #0000 99%, #000 101%) 0 0 / calc(var(--tooth) * 2) 100% repeat-x,
+    radial-gradient(var(--tooth) at var(--tooth) 100%, #0000 99%, #000 101%) 0 100% / calc(var(--tooth) * 2) 100% repeat-x,
+    linear-gradient(#000 0 0) 0 var(--tooth) / 100% calc(100% - var(--tooth) * 2) no-repeat;
+  padding-top: calc(clamp(1.4rem, 4vw, 2.4rem) + var(--tooth));
+  padding-bottom: calc(clamp(1.4rem, 4vw, 2.4rem) + var(--tooth));
+}
+
+.pr__thread {
+  position: absolute;
+  left: clamp(1.1rem, 4vw, 2.4rem);
+  top: calc(clamp(1.4rem, 4vw, 2.4rem) + var(--tooth) + 1.4rem);
+  bottom: calc(clamp(1.4rem, 4vw, 2.4rem) + var(--tooth) + 1.4rem);
+  width: 1px;
+  background: rgba(20, 48, 58, 0.14);
+}
+
+.pr__thread i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--orange);
+  transform-origin: top;
+}
+
+.pr__step {
+  position: relative;
+  padding-left: 2.6rem;
+  padding-block: 1.05rem;
+  border-bottom: 1px dashed rgba(20, 48, 58, 0.18);
+}
+
+.pr__step:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.pr__step:first-child {
+  padding-top: 0;
+}
+
+.pr__n {
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  display: block;
+  font-family: var(--f-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+  background: var(--paper-2);
+  padding-block: 2px;
+}
+
+.pr__step:first-child .pr__n {
+  top: 0.1rem;
+}
+
+.pr__t {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.pr__d {
+  margin-top: 0.35rem;
+  max-width: 48ch;
+  font-size: 0.875rem;
+  line-height: 1.62;
+  color: var(--ink-2);
+}
+
+.pr__foot {
+  margin-top: 1.5rem;
+  font-size: 1.35rem;
+  color: var(--blue-4);
+  transform: rotate(-1.2deg);
+  transform-origin: left;
+}
+
+/* ---------- desktop: phiếu nằm ngang ---------- */
+
+@media (min-width: 1024px) {
+  .pr__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
+    align-items: end;
+    gap: 2rem;
+  }
+
+  .pr__head .u-eyebrow,
+  .pr__h2 {
+    grid-column: 1;
+  }
+
+  .pr__sub {
+    grid-column: 2;
+    margin-bottom: 0.5rem;
+  }
+
+  .pr__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.6rem;
+  }
+
+  .pr__thread {
+    left: clamp(1.1rem, 4vw, 2.4rem);
+    right: clamp(1.1rem, 4vw, 2.4rem);
+    top: calc(clamp(1.4rem, 4vw, 2.4rem) + var(--tooth) + 2.15rem);
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+
+  .pr__thread i {
+    transform-origin: left;
+  }
+
+  .pr__step {
+    padding: 0;
+    border-bottom: 0;
+    border-left: 1px dashed rgba(20, 48, 58, 0.18);
+    padding-left: 1.2rem;
+  }
+
+  .pr__step:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .pr__n {
+    position: static;
+    margin-bottom: 1.35rem;
+    font-size: 1.05rem;
+    display: inline-block;
+    padding-right: 0.6rem;
+  }
+
+  .pr__t {
+    font-size: 1.1rem;
+  }
+
+  .pr__d {
+    font-size: 0.8125rem;
+  }
+
+  .pr__foot {
+    margin-top: 2rem;
+    text-align: right;
+    transform: rotate(1deg);
+    transform-origin: right;
+  }
+}

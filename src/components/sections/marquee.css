@@ -1,0 +1,57 @@
+.mq {
+  position: relative;
+  background: var(--blue-deep);
+  color: var(--paper-2);
+  padding-block: clamp(2.4rem, 6vw, 3.6rem) clamp(1.1rem, 3vw, 1.6rem);
+  overflow: hidden;
+}
+
+.mq__drip {
+  top: -1px;
+}
+
+.mq__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.mq__item {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--f-hand);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 5.6vw, 2.7rem);
+  line-height: 1.1;
+  white-space: nowrap;
+  color: var(--paper-2);
+}
+
+.mq__item:nth-child(3n) {
+  color: var(--blue-2);
+}
+
+.mq__item:nth-child(4n) {
+  color: var(--amber);
+}
+
+.mq__dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--orange);
+  margin-inline: clamp(1rem, 3vw, 2rem);
+  vertical-align: middle;
+}
+
+.mq__note {
+  margin-top: clamp(0.9rem, 2.5vw, 1.4rem);
+  padding-inline: var(--gut);
+  max-width: var(--maxw);
+  margin-inline: auto;
+}
+
+.mq__note .u-eyebrow {
+  color: var(--blue-3);
+}

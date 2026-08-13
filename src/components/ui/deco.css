@@ -1,0 +1,40 @@
+.drip {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: clamp(26px, 3.6vw, 52px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.drip--flip {
+  transform: scaleY(-1);
+}
+
+.icing-line {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.icing-line__p {
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7));
+}
+
+.candle {
+  width: clamp(26px, 4vw, 34px);
+  height: auto;
+  filter: drop-shadow(0 6px 10px rgba(20, 48, 58, 0.18));
+}
+
+.candle__flame {
+  transform-origin: 17px 30px;
+}
+
+.sprinkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
