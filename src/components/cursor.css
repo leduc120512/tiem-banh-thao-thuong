@@ -22,23 +22,24 @@ html.cursor-on .cur {
 }
 
 .cur__dot {
-  width: 7px;
-  height: 7px;
-  margin: -3.5px 0 0 -3.5px;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  margin: -0.21875rem 0 0 -0.21875rem;
   background: var(--orange);
 }
 
 .cur__ring {
-  width: 32px;
-  height: 32px;
-  margin: -16px 0 0 -16px;
-  border: 1px solid rgba(20, 48, 58, 0.45);
+  width: 2rem;
+  height: 2rem;
+  margin: -1rem 0 0 -1rem;
+  border: 0.0625rem solid rgba(20, 48, 58, 0.45);
   display: grid;
   place-content: center;
 }
 
+/* chữ nhỏ vì cả vành được GSAP phóng to lên 2.5 lần khi rê vào thứ bấm được */
 .cur__label {
-  font-size: 4.6px;
+  font-size: 0.2875rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: lowercase;

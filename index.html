@@ -27,19 +27,6 @@
       rel="stylesheet"
     />
     <link rel="preload" as="image" href="/img/cakes/cake-11-1200.webp" fetchpriority="high" />
-
-    <script>
-      // Đặt cờ sớm để CSS biết có JS + có được phép animate hay không.
-      // Nhờ vậy trạng thái "ẩn ban đầu" chỉ tồn tại khi chắc chắn GSAP sẽ hiện lại.
-      ;(function () {
-        var d = document.documentElement
-        d.classList.add('js')
-        try {
-          if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('anim')
-          if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) d.classList.add('fine')
-        } catch (e) {}
-      })()
-    </script>
   </head>
   <body>
     <div id="root"></div>

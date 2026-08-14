@@ -8,7 +8,7 @@ export const shop = {
   name: 'Thảo Thương',
   suffix: 'Bakery',
   since: 2023, // TODO: xác nhận năm mở tiệm
-  services: 'Bánh sinh nhật · Bánh cưới · Lễ nạp tài trọn gói',
+  services: '',
   address: '503 QL1A, Ninh Phạm, Quảng Ninh, Quảng Xương, Thanh Hoá',
   landmark: 'Ngã ba Cống Trúc',
   phone: '0976 608 474',
@@ -20,7 +20,7 @@ export const shop = {
     { d: 'Thứ 2 – Thứ 7', t: '6:00 – 21:30' }, // TODO
     { d: 'Chủ nhật', t: '6:00 – 22:00' }, // TODO
   ],
-  leadTime: 'Đặt trước tối thiểu 4 tiếng',
+  leadTime: 'Đặt trước tối thiểu ',
   delivery: 'Giao trong bán kính 10km quanh ngã ba Cống Trúc', // TODO
 } as const
 

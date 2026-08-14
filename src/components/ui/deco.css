@@ -2,13 +2,9 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: clamp(26px, 3.6vw, 52px);
+  height: clamp(1.625rem, 3.6vw, 3.25rem);
   z-index: 2;
   pointer-events: none;
-}
-
-.drip--flip {
-  transform: scaleY(-1);
 }
 
 .icing-line {
@@ -19,15 +15,17 @@
 }
 
 .icing-line__p {
-  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7));
+  filter: drop-shadow(0 0.0625rem 0 rgba(255, 255, 255, 0.7));
 }
 
 .candle {
-  width: clamp(26px, 4vw, 34px);
+  width: clamp(1.625rem, 4vw, 2.125rem);
   height: auto;
-  filter: drop-shadow(0 6px 10px rgba(20, 48, 58, 0.18));
+  filter: drop-shadow(0 0.375rem 0.625rem rgba(20, 48, 58, 0.18));
 }
 
+/* Toạ độ trong viewBox "0 0 34 96" của cây nến, không phải cỡ chữ —
+   để nguyên đơn vị người dùng của SVG thì gốc xoay mới bám đúng chân ngọn lửa. */
 .candle__flame {
   transform-origin: 17px 30px;
 }

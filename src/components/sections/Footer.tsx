@@ -49,7 +49,11 @@ export default function Footer() {
             <a className="ft__addr" href={shop.maps} target="_blank" rel="noreferrer">
               {shop.address}
             </a>
-            <p className="ft__hint">{shop.landmark}</p>
+            <p className="ft__hint">
+              {shop.landmark}
+              <br />
+              {shop.delivery}
+            </p>
           </div>
 
           <div className="ft__col">

@@ -28,7 +28,7 @@
   background: var(--paper-2);
   padding: clamp(1.4rem, 4vw, 2.4rem) clamp(1.1rem, 4vw, 2.4rem);
   /* mép trên và dưới răng cưa như phiếu xé */
-  --tooth: 12px;
+  --tooth: 0.75rem;
   -webkit-mask:
     radial-gradient(var(--tooth) at var(--tooth) 0, #0000 99%, #000 101%) 0 0 / calc(var(--tooth) * 2) 100% repeat-x,
     radial-gradient(var(--tooth) at var(--tooth) 100%, #0000 99%, #000 101%) 0 100% / calc(var(--tooth) * 2) 100% repeat-x,
@@ -46,7 +46,7 @@
   left: clamp(1.1rem, 4vw, 2.4rem);
   top: calc(clamp(1.4rem, 4vw, 2.4rem) + var(--tooth) + 1.4rem);
   bottom: calc(clamp(1.4rem, 4vw, 2.4rem) + var(--tooth) + 1.4rem);
-  width: 1px;
+  width: 0.0625rem;
   background: rgba(20, 48, 58, 0.14);
 }
 
@@ -62,7 +62,7 @@
   position: relative;
   padding-left: 2.6rem;
   padding-block: 1.05rem;
-  border-bottom: 1px dashed rgba(20, 48, 58, 0.18);
+  border-bottom: 0.0625rem dashed rgba(20, 48, 58, 0.18);
 }
 
 .pr__step:last-child {
@@ -85,7 +85,7 @@
   letter-spacing: 0.02em;
   color: var(--ink-3);
   background: var(--paper-2);
-  padding-block: 2px;
+  padding-block: 0.125rem;
 }
 
 .pr__step:first-child .pr__n {
@@ -147,7 +147,7 @@
     top: calc(clamp(1.4rem, 4vw, 2.4rem) + var(--tooth) + 2.15rem);
     bottom: auto;
     width: auto;
-    height: 1px;
+    height: 0.0625rem;
   }
 
   .pr__thread i {
@@ -157,7 +157,7 @@
   .pr__step {
     padding: 0;
     border-bottom: 0;
-    border-left: 1px dashed rgba(20, 48, 58, 0.18);
+    border-left: 0.0625rem dashed rgba(20, 48, 58, 0.18);
     padding-left: 1.2rem;
   }
 

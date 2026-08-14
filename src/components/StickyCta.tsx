@@ -18,23 +18,32 @@ export default function StickyCta() {
       const show = () => gsap.to(el, { yPercent: 0, duration: 0.5, ease: 'power3.out' })
       const hide = () => gsap.to(el, { yPercent: 130, duration: 0.4, ease: 'power2.in' })
 
-      const st = ScrollTrigger.create({
-        trigger: '.hero',
-        start: 'bottom 70%',
-        onEnter: show,
-        onLeaveBack: hide,
-      })
+      /* Lấy phần tử trực tiếp: chuỗi selector sẽ bị giới hạn trong scope của useGSAP,
+         mà hai mốc này lại nằm ngoài thanh CTA. */
+      const hero = document.querySelector('.hero')
+      const finalCta = document.querySelector('.fc')
 
-      const st2 = ScrollTrigger.create({
-        trigger: '.fc',
-        start: 'top 80%',
-        onEnter: hide,
-        onLeaveBack: show,
-      })
+      const st = hero
+        ? ScrollTrigger.create({
+            trigger: hero,
+            start: 'bottom 70%',
+            onEnter: show,
+            onLeaveBack: hide,
+          })
+        : null
+
+      const st2 = finalCta
+        ? ScrollTrigger.create({
+            trigger: finalCta,
+            start: 'top 85%',
+            onEnter: hide,
+            onLeaveBack: show,
+          })
+        : null
 
       return () => {
-        st.kill()
-        st2.kill()
+        st?.kill()
+        st2?.kill()
       }
     },
     { scope: root },

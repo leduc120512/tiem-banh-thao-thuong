@@ -7,7 +7,7 @@
 }
 
 .sty__drip {
-  top: -1px;
+  top: -0.0625rem;
 }
 
 .sty__grid {
@@ -19,7 +19,7 @@
 
 .sty__art {
   position: relative;
-  width: min(100%, 460px);
+  width: min(100%, 28.75rem);
 }
 
 .sty__stack {
@@ -27,13 +27,13 @@
 }
 
 .sty__big {
-  --chamf: 20px;
+  --chamf: 1.25rem;
   background: var(--paper-2);
   transform: rotate(-1.6deg);
 }
 
 .sty__small {
-  --chamf: 12px;
+  --chamf: 0.75rem;
   position: absolute;
   right: -6%;
   bottom: -10%;
@@ -67,8 +67,8 @@
 
 /* mũi tên chỉ ngược lên tấm biển ở phía trên */
 .sty__note svg {
-  width: 46px;
-  height: 30px;
+  width: 2.875rem;
+  height: 1.875rem;
   margin-top: 0.15rem;
   transform: rotate(-8deg);
 }
@@ -125,7 +125,7 @@
   gap: 1rem;
   margin-top: 1.9rem;
   padding-top: 1.4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 0.0625rem solid rgba(255, 255, 255, 0.16);
 }
 
 .sty__sticker {
@@ -144,8 +144,8 @@
   gap: 0.4rem;
   font-size: 0.8125rem;
   color: var(--blue-2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 2px;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.125rem;
 }
 
 .sty__map:hover {

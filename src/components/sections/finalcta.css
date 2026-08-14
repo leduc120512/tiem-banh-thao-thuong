@@ -7,7 +7,7 @@
 }
 
 .fc__drip {
-  top: -1px;
+  top: -0.0625rem;
 }
 
 .fc__grid {
@@ -52,8 +52,8 @@
 }
 
 .fc__art {
-  --chamf: 16px;
-  width: min(70%, 300px);
+  --chamf: 1rem;
+  width: min(70%, 18.75rem);
   justify-self: end;
   padding-bottom: 2rem;
   transform: rotate(3deg);
@@ -74,7 +74,7 @@
   }
 
   .fc__art {
-    width: clamp(260px, 26vw, 360px);
+    width: clamp(16.25rem, 26vw, 22.5rem);
     margin-right: -4%;
   }
 }

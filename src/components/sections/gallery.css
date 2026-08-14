@@ -57,23 +57,23 @@
 }
 
 .gl__btn {
-  --chamf: 10px;
+  --chamf: 0.625rem;
   display: block;
   width: 100%;
   position: relative;
-  padding: 5px 5px 1.55rem;
+  padding: 0.3125rem 0.3125rem 1.55rem;
   transition: transform 0.5s var(--e-out), box-shadow 0.5s var(--e-out);
 }
 
 /* đế bánh chưa viết gì thì không cần chừa chỗ cho chữ */
 .gl__btn--bare {
-  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
 }
 
 .gl__btn:hover,
 .gl__btn:focus-visible {
-  transform: rotate(0deg) translateY(-5px) scale(1.015);
-  box-shadow: 0 22px 40px -28px rgba(20, 48, 58, 0.6);
+  transform: rotate(0deg) translateY(-0.3125rem) scale(1.015);
+  box-shadow: 0 1.375rem 2.5rem -1.75rem rgba(20, 48, 58, 0.6);
   z-index: 2;
 }
 
@@ -107,8 +107,8 @@
 
 .gl__more a {
   color: var(--orange);
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 1px;
+  border-bottom: 0.0625rem solid currentColor;
+  padding-bottom: 0.0625rem;
 }
 
 @media (min-width: 700px) {

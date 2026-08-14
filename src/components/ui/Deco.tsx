@@ -6,16 +6,14 @@ import { useId } from 'react'
  */
 export function Drip({
   color = 'var(--paper)',
-  flip = false,
   className = '',
 }: {
   color?: string
-  flip?: boolean
   className?: string
 }) {
   return (
     <svg
-      className={`drip ${flip ? 'drip--flip' : ''} ${className}`}
+      className={`drip ${className}`}
       viewBox="0 0 1200 46"
       preserveAspectRatio="none"
       aria-hidden="true"

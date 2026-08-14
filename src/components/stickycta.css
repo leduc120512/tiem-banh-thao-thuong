@@ -15,10 +15,10 @@
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  min-height: 52px;
+  min-height: 3.25rem;
   font-size: 0.875rem;
   font-weight: 600;
-  border-radius: 999px;
+  border-radius: 62.5rem;
   -webkit-tap-highlight-color: transparent;
   transition: transform 0.25s var(--e-out);
 }
@@ -28,15 +28,15 @@
   padding-inline: 1.1rem;
   background: var(--paper-2);
   color: var(--ink);
-  border: 1px solid rgba(20, 48, 58, 0.2);
-  box-shadow: 0 10px 26px -16px rgba(20, 48, 58, 0.55);
+  border: 0.0625rem solid rgba(20, 48, 58, 0.2);
+  box-shadow: 0 0.625rem 1.625rem -1rem rgba(20, 48, 58, 0.55);
 }
 
 .sc__order {
   flex: 1;
   background: var(--orange);
   color: var(--paper-2);
-  box-shadow: 0 12px 30px -14px rgba(221, 95, 43, 0.85);
+  box-shadow: 0 0.75rem 1.875rem -0.875rem rgba(221, 95, 43, 0.85);
 }
 
 .sc__call:active,

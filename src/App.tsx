@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { ScrollTrigger, revealBatch, useGSAP } from './lib/anim'
+import { ScrollTrigger } from './lib/anim'
 import { useSmoothScroll } from './lib/useSmoothScroll'
 import type { CatId } from './data/site'
 
@@ -35,10 +35,6 @@ export default function App() {
   const chooseCat = useCallback((id: CatId) => {
     setFilter(id)
     document.getElementById('hinh')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }, [])
-
-  useGSAP(() => {
-    revealBatch()
   }, [])
 
   /* Ảnh tải xong thì đo lại vị trí — tránh mọi hiệu ứng cuộn lệch mốc. */

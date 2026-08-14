@@ -7,7 +7,7 @@
 }
 
 .mq__drip {
-  top: -1px;
+  top: -0.0625rem;
 }
 
 .mq__track {
@@ -37,8 +37,8 @@
 
 .mq__dot {
   display: inline-block;
-  width: 7px;
-  height: 7px;
+  width: 0.4375rem;
+  height: 0.4375rem;
   border-radius: 50%;
   background: var(--orange);
   margin-inline: clamp(1rem, 3vw, 2rem);

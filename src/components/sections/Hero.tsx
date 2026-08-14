@@ -194,7 +194,7 @@ export default function Hero({ onPick }: { onPick: (id: string) => void }) {
           <ul className="hero__facts">
             <li>
               <b>{shop.leadTime}</b>
-              <span>bánh vẽ tay đặt trước 1 ngày</span>
+              <span>bánh vẽ tay đặt trước 1 tiếng</span>
             </li>
             <li>
               <b>Zalo {shop.phone}</b>

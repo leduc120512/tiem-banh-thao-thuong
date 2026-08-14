@@ -30,7 +30,7 @@
   background: var(--paper-2);
   padding: clamp(1.3rem, 4vw, 1.7rem);
   transform: rotate(var(--tilt));
-  box-shadow: 0 16px 34px -26px rgba(20, 48, 58, 0.6);
+  box-shadow: 0 1rem 2.125rem -1.625rem rgba(20, 48, 58, 0.6);
   transition: transform 0.5s var(--e-out), box-shadow 0.5s var(--e-out);
 }
 
@@ -39,21 +39,21 @@
 }
 
 .rv__note:hover {
-  transform: rotate(0deg) translateY(-5px);
-  box-shadow: 0 26px 48px -30px rgba(20, 48, 58, 0.65);
+  transform: rotate(0deg) translateY(-0.3125rem);
+  box-shadow: 0 1.625rem 3rem -1.875rem rgba(20, 48, 58, 0.65);
 }
 
 /* băng dính giấy dán góc */
 .rv__tape {
   position: absolute;
-  top: -12px;
+  top: -0.75rem;
   left: 50%;
-  width: 78px;
-  height: 24px;
+  width: 4.875rem;
+  height: 1.5rem;
   transform: translateX(-50%) rotate(-2.5deg);
   background: rgba(179, 213, 224, 0.62);
-  border-left: 1px dashed rgba(255, 255, 255, 0.7);
-  border-right: 1px dashed rgba(255, 255, 255, 0.7);
+  border-left: 0.0625rem dashed rgba(255, 255, 255, 0.7);
+  border-right: 0.0625rem dashed rgba(255, 255, 255, 0.7);
 }
 
 .rv__note:nth-child(3n) .rv__tape {
@@ -90,7 +90,7 @@
   gap: 1rem;
   margin-top: 1.1rem;
   padding-top: 0.9rem;
-  border-top: 1px dashed rgba(20, 48, 58, 0.2);
+  border-top: 0.0625rem dashed rgba(20, 48, 58, 0.2);
 }
 
 .rv__who {
@@ -115,10 +115,10 @@
 }
 
 .rv__cake {
-  --chamf: 7px;
+  --chamf: 0.4375rem;
   flex: none;
-  width: 72px;
-  padding: 4px;
+  width: 4.5rem;
+  padding: 0.25rem;
   transform: rotate(3deg);
   transition: transform 0.45s var(--e-out);
 }
