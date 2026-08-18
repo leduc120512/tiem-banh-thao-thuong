@@ -166,6 +166,13 @@
   color: var(--orange);
 }
 
+/* giá trên thẻ chỉ là giá tham khảo — nói rõ ngay cạnh con số */
+.sig__meta em i {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
 /* tấm cuối: lối rẽ sang phần tự thiết kế */
 .sig__card--end {
   width: min(62vw, 16.25rem);

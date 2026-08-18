@@ -7,10 +7,10 @@ import './studio.css'
 const FLAVORS = [
   { id: 'bo', name: 'Cốt bơ trứng', add: 0 },
   { id: 'choco', name: 'Chocolate', add: 10 },
-  { id: 'matcha', name: 'Trà xanh', add: 15 },
+  { id: 'matcha', name: 'Trà xanh', add: 10 },
 ]
 
-const SHAPE_ADD: Record<string, number> = { round: 0, heart: 25, square: 15 }
+const SHAPE_ADD: Record<string, number> = { round: 0, heart: 20, square: 10 }
 
 export default function Studio() {
   const root = useRef<HTMLElement>(null)

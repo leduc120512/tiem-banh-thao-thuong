@@ -131,7 +131,9 @@ export default function Signature({ onPick }: { onPick: (id: string) => void }) 
                 <span className="sig__meta">
                   <b>{c.name}</b>
                   <span>{c.note}</span>
-                  <em>từ {vnd(c.from)}</em>
+                  <em>
+                    từ {vnd(c.from)} <i>· giá tham khảo</i>
+                  </em>
                 </span>
               </button>
             </li>
