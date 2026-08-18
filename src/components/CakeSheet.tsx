@@ -109,12 +109,14 @@ export default function CakeSheet({ id, onClose }: { id: string | null; onClose:
                     <li key={s.cm}>
                       <b>{s.cm}cm</b>
                       <span>{s.serve}</span>
-                      <em>{vnd(s.price + (cake.from - 180))}</em>
+                      <em>{vnd(s.price + (cake.from - sizes[0].price))}</em>
                     </li>
                   ))}
                 </ul>
                 <p className="cs__disclaimer">
-                  Giá đổi theo trang trí bạn chọn — tiệm báo lại con số cuối khi chốt mẫu.
+                  Con số trên chỉ là giá tham khảo thôi nha — nguyên liệu ngoài thị trường lên
+                  xuống từng đợt, trang trí thêm bớt cũng đổi. Bạn cứ nhắn tiệm, xem mẫu xong tiệm
+                  báo lại giá cuối và luôn tính khéo nhất cho bạn.
                 </p>
               </div>
 

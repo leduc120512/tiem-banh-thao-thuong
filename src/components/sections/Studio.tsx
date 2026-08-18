@@ -6,11 +6,11 @@ import './studio.css'
 
 const FLAVORS = [
   { id: 'bo', name: 'Cốt bơ trứng', add: 0 },
-  { id: 'choco', name: 'Chocolate', add: 15 },
-  { id: 'matcha', name: 'Trà xanh', add: 20 },
+  { id: 'choco', name: 'Chocolate', add: 10 },
+  { id: 'matcha', name: 'Trà xanh', add: 15 },
 ]
 
-const SHAPE_ADD: Record<string, number> = { round: 0, heart: 30, square: 20 }
+const SHAPE_ADD: Record<string, number> = { round: 0, heart: 25, square: 15 }
 
 export default function Studio() {
   const root = useRef<HTMLElement>(null)
@@ -41,7 +41,7 @@ export default function Studio() {
       `• Màu kem: ${cream.name}`,
       `• Trang trí: ${topNames.length ? topNames.join(', ') : 'để tiệm tự chọn'}`,
       `• Chữ trên bánh: ${msg.trim() || '(chưa ghi)'}`,
-      `• Giá tham khảo: ${vnd(total)}`,
+      `• Giá tham khảo trên web: ${vnd(total)} (nhờ tiệm báo lại giá cuối giúp mình nha)`,
     ].join('\n')
   }, [shape, size, flavor, cream, tops, msg, total])
 
@@ -238,7 +238,11 @@ export default function Studio() {
             <div className="st__price">
               <span className="u-eyebrow">Giá tham khảo</span>
               <strong>{vnd(total)}</strong>
-              <em>Tiệm chốt giá chính xác sau khi xem mẫu bạn gửi.</em>
+              <em>
+                Con số này để bạn hình dung trước thôi nha — nguyên liệu tiệm lấy theo giá thị
+                trường nên có đợt lên đợt xuống. Gửi mẫu qua Zalo, tiệm xem rồi báo lại giá cuối,
+                bạn yên tâm là tiệm luôn tính mức dễ chịu nhất.
+              </em>
             </div>
             <div className="st__acts">
               <a

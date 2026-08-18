@@ -99,7 +99,8 @@ export default function Signature({ onPick }: { onPick: (id: string) => void }) 
         </h2>
         <p className="sig__note">
           Mẫu nào cũng đổi được màu kem, đổi size, đổi lời nhắn. Chạm vào một tấm để xem giá và
-          nhắn đặt luôn.
+          nhắn đặt luôn. Giá ghi dưới mỗi mẫu là giá tham khảo — nguyên liệu theo thị trường từng
+          đợt, nên tiệm báo lại con số cuối cho bạn khi biết mẫu và ngày cần.
         </p>
         <span className="sig__hint u-hand" aria-hidden="true">
           kéo ngang →

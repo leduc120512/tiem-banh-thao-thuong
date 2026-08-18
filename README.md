@@ -24,7 +24,7 @@ Vài chỗ **cần chủ tiệm xác nhận lại** (đã đánh dấu `TODO` tr
 | `shop.hours` | 6:00 – 21:30 (T2–T7), 6:00 – 22:00 (CN) |
 | `shop.leadTime` | Đặt trước tối thiểu 4 tiếng |
 | `shop.delivery` | Giao trong bán kính 10km |
-| `sizes` / `toppings` | Bảng giá tham khảo (16cm 180k → 25cm 520k) |
+| `sizes` / `toppings` | Bảng giá tham khảo (16cm 145k → 25cm 415k), tiệm chốt lại theo giá nguyên liệu thị trường |
 | `reviews` | 4 lời khách viết mẫu — nên thay bằng ảnh chụp Zalo/Facebook thật |
 | `shop.facebook` | Đang trỏ tới trang tìm kiếm, nên thay bằng link fanpage thật |
 

@@ -97,7 +97,7 @@ export const cakes: Cake[] = [
     msg: 'happy birth day Mom iu',
     cat: 'birthday',
     note: 'Thân bánh vuốt sọc dọc, hoa bắt kem hồng đậm hồng nhạt xen nhau, rắc châu trắng.',
-    from: 260,
+    from: 210,
   },
   {
     id: 'c02',
@@ -107,7 +107,7 @@ export const cakes: Cake[] = [
     msg: 'Chúc mừng sinh nhật Lê Văn Giáp 11 tuổi',
     cat: 'kids',
     note: 'Bắt cỏ hai tông xanh, bóng nhựa và cúp vàng cắm nổi. Mẫu các bạn nam hay chọn.',
-    from: 280,
+    from: 225,
   },
   {
     id: 'c03',
@@ -117,7 +117,7 @@ export const cakes: Cake[] = [
     msg: 'Chúc Phú đậu viên chức',
     cat: 'custom',
     note: 'Vẽ tay bằng chocolate đen trên nền kem trắng. Gửi ảnh trước một ngày là vẽ được.',
-    from: 320,
+    from: 255,
   },
   {
     id: 'c04',
@@ -127,7 +127,7 @@ export const cakes: Cake[] = [
     msg: 'Happy birth day Hà Trang',
     cat: 'minimal',
     note: 'Kem trắng, drip hồng nhạt chảy đều mép, mấy cái nơ bắt nhỏ xíu quanh thân.',
-    from: 240,
+    from: 190,
   },
   {
     id: 'c05',
@@ -137,7 +137,7 @@ export const cakes: Cake[] = [
     msg: 'Cầm lấy mà đi sinh nhật',
     cat: 'custom',
     note: 'Mặt cười vẽ nguệch ngoạc, kẹp thêm tờ tiền thật. Khách trẻ đặt tặng bạn thân.',
-    from: 260,
+    from: 210,
   },
   {
     id: 'c06',
@@ -147,7 +147,7 @@ export const cakes: Cake[] = [
     msg: 'Happy birth day Gia Huy 3 tuổi',
     cat: 'kids',
     note: 'Bánh vòm xanh pastel, kem trắng phủ như tuyết, con mèo nặn tay đặt trên chóp.',
-    from: 300,
+    from: 240,
   },
   {
     id: 'c07',
@@ -157,7 +157,7 @@ export const cakes: Cake[] = [
     msg: 'Chúc mừng sinh nhật Mẹ yêu',
     cat: 'birthday',
     note: 'Thân bánh chuyển hồng dần xuống chân, hoa kem cánh mỏng, nơ voan trắng.',
-    from: 290,
+    from: 230,
   },
   {
     id: 'c08',
@@ -167,7 +167,7 @@ export const cakes: Cake[] = [
     msg: 'Chúc mừng sinh nhật Vợ yêu 24 tuổi',
     cat: 'celebration',
     note: 'Cốt tim, viền bắt sò trắng, ruy băng đỏ mận thắt nơ ở chân bánh.',
-    from: 330,
+    from: 265,
   },
   {
     id: 'c09',
@@ -177,7 +177,7 @@ export const cakes: Cake[] = [
     msg: 'Chúc mừng sinh nhật Ngọc Diệp 7 tuổi',
     cat: 'kids',
     note: 'Bông lan phủ ruốc và sốt trứng muối, thắt nơ tím, cắm topping theo nhân vật bé thích.',
-    from: 320,
+    from: 255,
   },
   {
     id: 'c10',
@@ -187,7 +187,7 @@ export const cakes: Cake[] = [
     msg: 'Em Gái Bánh Bao 1 tuổi',
     cat: 'kids',
     note: 'Cùng cốt bông lan trứng muối, đổi sang bộ topping lâu đài và nàng tiên nhỏ.',
-    from: 320,
+    from: 255,
   },
   {
     id: 'c11',
@@ -197,7 +197,7 @@ export const cakes: Cake[] = [
     msg: '',
     cat: 'birthday',
     note: 'Xoài, dâu, nho, cúc hoạ mi tươi xếp giữa vành kem bắt răng cưa. Mẫu bán chạy quanh năm.',
-    from: 280,
+    from: 225,
   },
   {
     id: 'c12',
@@ -207,7 +207,7 @@ export const cakes: Cake[] = [
     msg: 'Nhân ngày Phụ nữ Việt Nam xin chúc phái đẹp luôn luôn rạng ngời',
     cat: 'celebration',
     note: 'Bắt kín mặt bánh bằng hoa hồng xoáy, bọc voan như một bó hoa mang đi tặng được.',
-    from: 350,
+    from: 280,
   },
   {
     id: 'c13',
@@ -217,7 +217,7 @@ export const cakes: Cake[] = [
     msg: 'Chúc Mẹ yêu 20/10 vui vẻ',
     cat: 'celebration',
     note: 'Cả chiếc bánh là một bông hồng, cánh vuốt từ ngoài vào, nhuỵ hồng phấn ở giữa.',
-    from: 360,
+    from: 290,
   },
   {
     id: 'c14',
@@ -227,7 +227,7 @@ export const cakes: Cake[] = [
     msg: 'Chúc mẹ ngày lễ 20/10 thật nhiều sức khoẻ',
     cat: 'minimal',
     note: 'Cùng lối bắt cánh, nhuỵ đánh đậm hơn, ruy băng chữ thay cho voan.',
-    from: 360,
+    from: 290,
   },
   {
     id: 'c15',
@@ -237,7 +237,7 @@ export const cakes: Cake[] = [
     msg: 'Cảm ơn anh đã đến trong cuộc sống của em',
     cat: 'celebration',
     note: 'Nền đỏ nhung, viền bắt sò trắng. Đế bánh viết kín cả một lá thư.',
-    from: 340,
+    from: 270,
   },
   {
     id: 'c16',
@@ -247,7 +247,7 @@ export const cakes: Cake[] = [
     msg: 'Mẹ iu con zai của mẹ nhiều',
     cat: 'kids',
     note: 'Bánh chữ nhật, viền bắt sóng xanh biển, tượng ngựa và bánh quy pretzel làm hàng rào.',
-    from: 380,
+    from: 305,
   },
 ]
 
@@ -276,11 +276,11 @@ export const realMessages = [
 ]
 
 export const sizes = [
-  { cm: 16, serve: '2 – 4 người', price: 180 },
-  { cm: 18, serve: '4 – 6 người', price: 230 },
-  { cm: 20, serve: '6 – 10 người', price: 300 },
-  { cm: 22, serve: '10 – 14 người', price: 380 },
-  { cm: 25, serve: '15 – 20 người', price: 520 },
+  { cm: 16, serve: '2 – 4 người', price: 145 },
+  { cm: 18, serve: '4 – 6 người', price: 185 },
+  { cm: 20, serve: '6 – 10 người', price: 240 },
+  { cm: 22, serve: '10 – 14 người', price: 305 },
+  { cm: 25, serve: '15 – 20 người', price: 415 },
 ]
 
 export const shapes = [
@@ -299,13 +299,13 @@ export const creams = [
 ]
 
 export const toppings = [
-  { id: 'flower', name: 'Hoa bắt kem', add: 40 },
-  { id: 'drip', name: 'Drip chảy mép', add: 20 },
-  { id: 'ribbon', name: 'Nơ ruy băng', add: 15 },
-  { id: 'fruit', name: 'Hoa quả tươi', add: 50 },
-  { id: 'figure', name: 'Tượng / topping nhân vật', add: 45 },
-  { id: 'photo', name: 'In ảnh ăn được', add: 60 },
-  { id: 'floss', name: 'Đổi cốt bông lan trứng muối', add: 50 },
+  { id: 'flower', name: 'Hoa bắt kem', add: 30 },
+  { id: 'drip', name: 'Drip chảy mép', add: 15 },
+  { id: 'ribbon', name: 'Nơ ruy băng', add: 10 },
+  { id: 'fruit', name: 'Hoa quả tươi', add: 40 },
+  { id: 'figure', name: 'Tượng / topping nhân vật', add: 35 },
+  { id: 'photo', name: 'In ảnh ăn được', add: 50 },
+  { id: 'floss', name: 'Đổi cốt bông lan trứng muối', add: 40 },
 ]
 
 export const steps = [
